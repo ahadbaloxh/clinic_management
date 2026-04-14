@@ -1,13 +1,15 @@
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
 
-import './App.css'
 
 function App() {
 
+
   return (
     <>
-      <h1 className="text-3xl font-bold underline">hello</h1>
+      <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

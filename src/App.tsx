@@ -3,9 +3,9 @@ import AppLayout from "@/components/layout/Layout";
 import LoginPage from "@/pages/Auth/Login";
 import Dashboard from "@/pages/Doctor/Dashboard";
 import Appointments from "@/pages/Doctor/Appointments/Appointments";
-import Patients from "@/pages/Doctor/Patients/Patients";
 import Records from "@/pages/Doctor/Records";
 import Settings from "@/pages/Doctor/Settings";
+import Patients from "./pages/Doctor/Patients/Patients";
 
 function App() {
   return (

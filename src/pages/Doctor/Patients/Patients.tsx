@@ -270,7 +270,7 @@ export default function Patients() {
               <TableHead>CNIC</TableHead>
               <TableHead>Phone</TableHead>
               <TableHead>Visit</TableHead>
-              <TableHead>Status (Active)</TableHead>
+              <TableHead>Status</TableHead>
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>

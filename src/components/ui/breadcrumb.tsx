@@ -1,7 +1,7 @@
-import * as React from "react"
-import { ChevronRight } from "lucide-react"
-import { Link } from "react-router-dom"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 export function Breadcrumb({
     className,
@@ -13,7 +13,7 @@ export function Breadcrumb({
             className={cn("flex items-center text-sm text-muted-foreground", className)}
             {...props}
         />
-    )
+    );
 }
 
 export function BreadcrumbList({
@@ -22,27 +22,36 @@ export function BreadcrumbList({
 }: React.OlHTMLAttributes<HTMLOListElement>) {
     return (
         <ol
-            className={cn("flex items-center gap-1.5", className)}
+            className={cn("flex items-center gap-1.5 list-none", className)}
             {...props}
         />
-    )
+    );
 }
 
 export function BreadcrumbItem({
     className,
     ...props
 }: React.LiHTMLAttributes<HTMLLIElement>) {
-    return <li className={cn("inline-flex items-center gap-1.5", className)} {...props} />
+    return (
+        <li
+            className={cn("flex items-center gap-1.5", className)}
+            {...props}
+        />
+    );
 }
+
+type BreadcrumbLinkProps = {
+    href: string;
+    className?: string;
+    children: React.ReactNode;
+} & Omit<React.ComponentProps<typeof Link>, "to">;
 
 export function BreadcrumbLink({
     href,
     className,
     children,
     ...props
-}: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    href: string
-}) {
+}: BreadcrumbLinkProps) {
     return (
         <Link
             to={href}
@@ -51,7 +60,7 @@ export function BreadcrumbLink({
         >
             {children}
         </Link>
-    )
+    );
 }
 
 export function BreadcrumbPage({
@@ -64,7 +73,7 @@ export function BreadcrumbPage({
             className={cn("font-medium text-foreground", className)}
             {...props}
         />
-    )
+    );
 }
 
 export function BreadcrumbSeparator({
@@ -75,10 +84,13 @@ export function BreadcrumbSeparator({
         <span
             role="presentation"
             aria-hidden="true"
-            className={cn("text-muted-foreground", className)}
+            className={cn(
+                "flex items-center text-muted-foreground",
+                className
+            )}
             {...props}
         >
             <ChevronRight className="h-4 w-4" />
         </span>
-    )
+    );
 }

@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "@/components/layout/Layout";
 import LoginPage from "@/pages/Auth/Login";
 import Dashboard from "@/pages/Doctor/Dashboard";
-import Patients from "@/pages/Doctor/Patients";
+import Appointments from "@/pages/Doctor/Appointments/Appointments";
+import Patients from "@/pages/Doctor/Patients/Patients";
 import Records from "@/pages/Doctor/Records";
 import Settings from "@/pages/Doctor/Settings";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="appointments" element={<Appointments />} />
           <Route path="patients" element={<Patients />} />
           <Route path="records" element={<Records />} />
           <Route path="settings" element={<Settings />} />

@@ -23,7 +23,7 @@ import {
 
 export default function Header() {
   const [language, setLanguage] = useState("EN");
-  const [campus, setCampus] = useState("Main Campus");
+  const [campus, setCampus] = useState("Clinic Saddar");
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function Header() {
         {/* LANGUAGE */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="gap-2 rounded-xl px-3 h-10">
+            <Button variant="ghost" className="gap-2 rounded-xl border border-gray-400 px-3 h-10">
               <Globe className="h-4 w-4" />
               <span className="text-sm">{language}</span>
               <ChevronDown className="h-4 w-4" />
@@ -63,7 +63,7 @@ export default function Header() {
 
           <DropdownMenuContent
             align="end"
-            className={`${dropdownMatchTrigger} p-1`}
+            className={`${dropdownMatchTrigger} p-1 `}
           >
             <DropdownMenuLabel>Language</DropdownMenuLabel>
             <DropdownMenuSeparator />
@@ -72,7 +72,7 @@ export default function Header() {
               <DropdownMenuItem
                 key={lang}
                 onClick={() => setLanguage(lang)}
-                className="rounded-md"
+                className="rounded-md "
               >
                 {lang}
               </DropdownMenuItem>
@@ -83,7 +83,7 @@ export default function Header() {
         {/* CAMPUS */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="gap-2 rounded-xl px-3 h-10">
+            <Button variant="ghost" className="gap-2 rounded-xl border border-gray-400 px-3 h-10">
               <School className="h-4 w-4" />
               <span className="text-sm max-w-[120px] truncate">
                 {campus}
@@ -99,7 +99,7 @@ export default function Header() {
             <DropdownMenuLabel>Select Campus</DropdownMenuLabel>
             <DropdownMenuSeparator />
 
-            {["Main Campus", "City Campus", "North Campus"].map((c) => (
+            {["Clinic Saddar", "Clinic Hala", "Clinic Rajputana"].map((c) => (
               <DropdownMenuItem
                 key={c}
                 onClick={() => setCampus(c)}
@@ -112,7 +112,7 @@ export default function Header() {
         </DropdownMenu>
 
         {/* TIME CARD */}
-        <div className="flex items-center gap-2 px-3 h-10 rounded-xl border bg-muted/40 text-sm text-muted-foreground">
+        <div className="flex items-center gap-2 px-3 h-10 rounded-xl border border-gray-400 bg-muted/40 text-sm text-muted-foreground">
           <Clock className="h-4 w-4" />
           <span>
             {time.toLocaleTimeString([], {

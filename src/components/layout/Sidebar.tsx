@@ -22,6 +22,7 @@ const menuSections = [
     title: "Main",
     items: [
       { label: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
+      { label: "Appointments", icon: Activity, path: "/appointments" },
       { label: "Patients", icon: Users, path: "/patients" },
       { label: "Records", icon: FileText, path: "/records" },
     ],

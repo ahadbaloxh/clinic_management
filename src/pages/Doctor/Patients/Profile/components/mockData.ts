@@ -1,0 +1,65 @@
+export const patientMockData = {
+  name: "Abdul Razak",
+  riskLevel: "HIGH RISK",
+  age: 85,
+  gender: "Male",
+  dob: "12/04/1938",
+  mrNumber: "001234",
+  cnic: "42101-1234567-1",
+  phone: "0300-1234567",
+  city: "Karachi",
+  vitals: [
+    { label: "Heart Rate", value: "78", unit: "bpm", icon: "Heart" },
+    { label: "Glucose", value: "142", unit: "mg/dL", icon: "Droplets" },
+    { label: "BP", value: "138/84", unit: "", icon: "Activity" },
+    { label: "Temp", value: "98.6", unit: "°F", icon: "Thermometer" },
+    { label: "Weight", value: "172", unit: "lb", icon: "Scale" },
+  ],
+  chronicConditions: [
+    { name: "Bronchial Asthma", status: "ACTIVE", date: "Diagnosed: 1955", severity: "Persistent Moderate", notes: "Triggered by seasonal allergens and dust." },
+    { name: "Essential Hypertension", status: "CONTROLLED", date: "Diagnosed: 2002", followUp: "Q3 Months", notes: "Current regimen well-tolerated." },
+    { name: "Type 2 Diabetes Mellitus", status: "ACTIVE", date: "Diagnosed: 2015", target: "Hb1c: <7.0%", notes: "Monitoring for peripheral neuropathy." },
+    { name: "Hyperlipidemia", status: "MONITOR", date: "Diagnosed: 2010", lastLipids: "Nov 2023", notes: "Dietary management reinforced." },
+  ],
+  medications: [
+    { name: "Albuterol Inhaler", status: "ACTIVE", dose: "90mcg - 2 puffs q4-6h prn wheezing", lastFill: "11/15/2023", refills: 3 },
+    { name: "Lisinopril", status: "ACTIVE", dose: "10mg Tablet - Once daily AM", lastFill: "12/01/2023", refills: 5 },
+    { name: "Amoxicillin", status: "DISCONTINUED", dose: "500mg - Course completed 09/2023" },
+  ],
+  allergies: [
+    { substance: "Penicillin", severity: "SEVERE", reaction: "Anaphylaxis, hives. Diagnosed 1962." },
+    { substance: "Latex", severity: "MODERATE", reaction: "Contact dermatitis. Use non-latex gloves." },
+  ],
+  immunizations: [
+    { name: "Influenza (Annual)", date: "Oct 20, 2023" },
+    { name: "COVID-19 Booster", date: "Sep 12, 2023" },
+    { name: "Pneumococcal (PPSV23)", date: "May 05, 2021" },
+  ],
+  familyHistory: [
+    { relation: "Paternal (Father)", details: "Ischemic Heart Disease • Stroke at age 72 (Deceased)", notes: "Strong cardiovascular predisposition noted." },
+    { relation: "Siblings (Brother)", details: "Asthma • Hypertension", notes: "Brother (62) manages similar conditions." },
+    { relation: "Maternal (Mother)", details: "Type 2 Diabetes • Rheumatoid Arthritis (Deceased)", notes: "Diagnosed diabetes at age 55." },
+    { relation: "Children (Daughter)", details: "Environmental Allergies", notes: "Healthy, seasonal hay fever reported." },
+  ],
+  procedures: [
+    { name: "Cataract Surgery (Right Eye)", date: "Oct 14, 2023", doctor: "Dr. Michael Chen", facility: "St. Luke's Eye Clinic", outcome: "SUCCESSFUL", details: "20/25 Vision" },
+    { name: "Knee Arthroscopy (Left)", date: "May 02, 2021", doctor: "Dr. Linda Wu", facility: "City General Hosp.", outcome: "COMPLETED", details: "Full mobility" },
+    { name: "Appendectomy", date: "Nov 12, 1995", doctor: "Legacy Health", facility: "", outcome: "HISTORICAL" },
+  ],
+  files: [
+    { name: "Chest_XRay_11-23.pdf", date: "Nov 22, 2023", size: "2.4 MB", type: "PDF" },
+    { name: "Discharge_Summary.doc", date: "Oct 15, 2023", size: "45 KB", type: "DOC" },
+    { name: "Lab_Result_Scans.jpg", date: "Sep 10, 2023", size: "8.1 MB", type: "IMG" },
+  ],
+  visits: [
+    { date: "TODAY • 09:30 AM", title: "General Check-up & Asthma Review", doctor: "Dr. Sarah Jenkins", notes: "Refined inhaler dosage and monitored peak flow." },
+    { date: "OCT 14, 2023", title: "Cataract Surgery Follow-up", doctor: "Dr. Michael Chen", notes: "Excellent healing of right eye. Vision 20/25." },
+    { date: "AUG 02, 2023", title: "Urgent Care - Respiratory Distress", doctor: "Nurse Practitioner Hall", notes: "Wheezing noted. Nebulizer treatment administered." },
+  ],
+  emergencyContacts: [
+    { name: "Martha Edwards", relation: "Spouse", phone: "(555) 012-3456" },
+    { name: "Primary Care", doctor: "Dr. Sarah Jenkins", phone: "(555) 987-6543" },
+  ],
+  careNotes: "Patient prefers morning appointments due to reduced mobility in afternoons. Always uses a walker. Ensure asthma action plan is printed in large font.",
+  careBadges: ["LARGE PRINT", "MOBILITY ASSIST"],
+};
